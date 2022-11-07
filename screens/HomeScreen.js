@@ -1,4 +1,4 @@
-import { View, Text, Image, TextInput } from "react-native";
+import { View, Text, Image, TextInput, ScrollView } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -8,6 +8,7 @@ import {
   MagnifyingGlassIcon,
   AdjustmentsVerticalIcon,
 } from "react-native-heroicons/outline";
+import Categories from "../components/Categories";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -19,7 +20,9 @@ const HomeScreen = () => {
   }, []);
 
   return (
+    
     <SafeAreaView className="bg-white pt-5">
+      
       {/* Header */}
       <View className="flex-row pb-3 items-center mx-4 space-x-2">
         <Image
@@ -28,6 +31,8 @@ const HomeScreen = () => {
           }}
           className="h-7 w-7 rounded-full p-4 bg-gray-300 "
         />
+
+        
 
         <View className="flex-1">
           <Text className="font-bold text-gray-400  text-xs">Deliver Now</Text>
@@ -41,17 +46,28 @@ const HomeScreen = () => {
       </View>
 
       {/* Search */}
-      <View className='flex-row items-center space-x-2 pb-2 mx-4 '>
-        <View className='flex-row flex-1  bg-gray-200 space-x-2 p-3 items-center'>
+      <View className="flex-row items-center space-x-2 pb-2 mx-4 ">
+        <View className="flex-row flex-1  bg-gray-200 space-x-2 p-3 items-center">
           <MagnifyingGlassIcon size={20} color="gray" />
-          <TextInput placeholder="Restaurants and Cuisines"
-          keyboardType="default"
+          <TextInput
+            placeholder="Restaurants and Cuisines"
+            keyboardType="default"
           />
-
         </View>
 
         <AdjustmentsVerticalIcon color="#00CCBB" />
       </View>
+
+{/* Main Body */}
+      <ScrollView className='bg-gray-100' contentContainerStyle={{
+        paddingBottom:100
+      }}>
+        {/* Categories */}
+<Categories/>
+
+
+        {/* Featured Rows */}
+      </ScrollView>
     </SafeAreaView>
   );
 };
