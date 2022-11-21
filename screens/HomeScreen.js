@@ -40,7 +40,7 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <SafeAreaView className="bg-white pt-5">
+    <SafeAreaView className="bg-white py-5">
       {/* Header */}
       <View className="flex-row pb-3 items-center mx-4 space-x-2">
         <Image
@@ -78,7 +78,7 @@ const HomeScreen = () => {
       <ScrollView
         className="bg-gray-100"
         contentContainerStyle={{
-          paddingBottom: 100,
+          paddingBottom: 120,
         }}
       >
         {/* Categories */}
