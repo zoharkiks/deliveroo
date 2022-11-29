@@ -34,17 +34,17 @@ const RestaurantCard = ({
           lat,
         });
       }}
-      className="bg-white mr-3 shadow "
+      className="mr-3 bg-white shadow "
     >
       <Image
-        className="h-36 w-64 rounded "
+        className="w-64 rounded h-36 "
         source={{
           uri: urlFor(imgUrl).url(),
         }}
       />
 
       <View className="px-3 pb-4">
-        <Text className="font-bold text-lg pt-2">{title}</Text>
+        <Text className="pt-2 text-lg font-bold">{title}</Text>
         <View className="flex-row items-center space-x-1">
           <StarIcon color="green" opacity={0.5} size={22} />
           <Text className="text-xs text-gray-500">
@@ -52,9 +52,9 @@ const RestaurantCard = ({
           </Text>
         </View>
 
-        <View className="flex-row  ">
+        <View className="flex-row ">
           <MapPinIcon color="gray" opacity={0.4} size={22} />
-          <Text className="text-xs  text-gray-500">Nearby . {address}</Text>
+          <Text className="text-xs text-gray-500">Nearby . {address}</Text>
         </View>
       </View>
     </TouchableOpacity>

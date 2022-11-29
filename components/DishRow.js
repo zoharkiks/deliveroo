@@ -30,9 +30,9 @@ const DishRow = ({ id, name, description, price, image }) => {
       >
         <View className="flex-row">
           <View className="flex-1 pr-2">
-            <Text className="text-lg mb-1">{name}</Text>
+            <Text className="mb-1 text-lg">{name}</Text>
             <Text className="text-gray-400">{description}</Text>
-            <Text className="text-gray-400 mt-2">
+            <Text className="mt-2 text-gray-400">
               <Currency quantity={price} currency="INR" />
             </Text>
           </View>
@@ -44,15 +44,15 @@ const DishRow = ({ id, name, description, price, image }) => {
                 borderColor: "#f3f3f4",
               }}
               source={{ uri: urlFor(image).url() }}
-              className="h-20 w-20 bg-gray-300 p-4 "
+              className="w-20 h-20 p-4 bg-gray-300 "
             />
           </View>
         </View>
       </TouchableOpacity>
 
       {isPressed && (
-        <View className="bg-white px-4 ">
-          <View className="flex-row items-center space-x-2 pb-3">
+        <View className="px-4 bg-white ">
+          <View className="flex-row items-center pb-3 space-x-2">
             <TouchableOpacity disabled={!items.length} onPress={removeItemsFromBasket} >
               <MinusCircleIcon  color={items.length>0 ? '#00ccbb' :'gray'} size={40} />
             </TouchableOpacity>
