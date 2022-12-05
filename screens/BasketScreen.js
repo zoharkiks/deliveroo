@@ -124,7 +124,7 @@ const BasketScreen = () => {
             </Text>
           </View>
           
-          <TouchableOpacity className='rounded-lg bg-[#00ccbb] p-4'>
+          <TouchableOpacity onPress={()=>navigation.navigate("PreparingOrder")} className='rounded-lg bg-[#00ccbb] p-4'>
             <Text className='text-lg font-bold text-center text-white'>Place Order</Text>
           </TouchableOpacity>
         </View>
